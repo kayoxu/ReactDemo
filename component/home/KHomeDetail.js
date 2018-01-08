@@ -26,11 +26,18 @@ class KHomeDetail extends Component<{}> {
 
     static navigationOptions = (navigation, screenProps) => {
         let nav = zimaUtils.NavOptions("Detail");
+
         nav.headerRight = (
             <View style={{height: 44, width: 55, justifyContent: 'center', paddingRight: 15}}/>
         );
+        // nav.header = (
+        //     <View>
+        //
+        //     </View>
+        // );
         return nav;
     };
+
 
     render() {
         return (
@@ -42,8 +49,6 @@ class KHomeDetail extends Component<{}> {
     }
 
 }
-
-
 
 
 const styles = StyleSheet.create({

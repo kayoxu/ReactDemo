@@ -23,7 +23,7 @@ let HomeDetail = require('../home/KHomeDetail');
 let zimaUtils = require('../../util/zimaUtils');
 
 
-let mainPage = "Shop";
+let mainPage = "Home";
 
 
 class KMain extends Component<{}> {
@@ -50,22 +50,22 @@ const KTab = TabNavigator({
         screen: Home,
         // navigationOptions:()=>NavOptions("Home", 'i_0', 'i_1', 'Home')
         navigationOptions: () => {
-            let options = zimaUtils.NavOptions("Home", 'Home', 'i_1', 'i_2');
-
-            return options;
+            let options = zimaUtils.NavOptions("首页", '首页', 'icon_tabbar_homepage', 'icon_tabbar_homepage_selected');
+            // options.headerMode = 'none';
+         //   return options;
         }
     },
     Shop: {
         screen: Shop,
-        navigationOptions: () => zimaUtils.NavOptions("Shop", 'Shop', 'i_3', 'i_4'),
+        navigationOptions: () => zimaUtils.NavOptions("商家", '商家', 'icon_tabbar_merchant_normal', 'icon_tabbar_merchant_selected'),
     },
     Mine: {
         screen: Mine,
-        navigationOptions: () => zimaUtils.NavOptions("Mine", 'Mine', 'i_5', 'i_6'),
+        navigationOptions: () => zimaUtils.NavOptions("我的", '我的', 'icon_tabbar_mine', 'icon_tabbar_mine_selected'),
     },
     More: {
         screen: More,
-        navigationOptions: () => zimaUtils.NavOptions("More", 'More', 'i_7', 'i_8'),
+        navigationOptions: () => zimaUtils.NavOptions("更多", '更多', 'icon_tabbar_misc', 'icon_tabbar_misc_selected'),
     }
 }, {
     tabBarPosition: 'bottom',
@@ -84,8 +84,8 @@ const KTab = TabNavigator({
         style: {
             backgroundColor: '#0000',
             height: 52,
-            // zIndex: 0,
-            // position: 'relative'
+            zIndex: 0,
+            position: 'relative'
         },
         labelStyle: {
             fontSize: 11,
@@ -105,7 +105,7 @@ const KTab = TabNavigator({
         }
     }
 
-} );
+});
 
 const KNav = StackNavigator({
     KTab: {

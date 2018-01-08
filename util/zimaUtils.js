@@ -8,7 +8,7 @@ import React from 'react';
 
 let {width, height} = Dimensions.get('window');
 
-let mainColor = '#EA5555';
+let mainColor = 'orange';
 
 function openLock(keyId) {
     return Linking.canOpenURL('zima://com.hizima/sdk').then(supported => {
@@ -91,6 +91,8 @@ module.exports = {
     doLater: doLater,
     startActivity: startActivity,
     NavOptions: NavOptions,
-    mainColor: mainColor
+    mainColor: mainColor,
+    height: height,
+    width: width
 };
 
