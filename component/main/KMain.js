@@ -78,21 +78,21 @@ const KTab = TabNavigator({
         upperCaseLabel: true,
         showIcon: true,
         showLabel: true,
-        activeTintColor:'white',
-        inactiveTintColor:'wheat',
+        activeTintColor: 'white',
+        inactiveTintColor: 'wheat',
 
         style: {
             backgroundColor: '#0000',
             height: 52,
-            zIndex: 0,
-            position: 'relative'
+            // zIndex: 0,
+            // position: 'relative'
         },
         labelStyle: {
             fontSize: 11,
             marginTop: -1,
         },
         iconStyle: {
-            // marginTop: -4,
+            marginTop: -1,
             height: 30,
             width: 30
         },
@@ -105,7 +105,7 @@ const KTab = TabNavigator({
         }
     }
 
-});
+} );
 
 const KNav = StackNavigator({
     KTab: {

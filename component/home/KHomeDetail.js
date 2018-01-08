@@ -32,13 +32,6 @@ class KHomeDetail extends Component<{}> {
         return nav;
     };
 
-
-
-    // static navigationOptions = zimaUtils.NavOptions("dddd", 1);
-
-    //navigationOptions: () => zimaUtils.NavOptions("Find", 'Find', 'i_2', 'i_3'),
-
-
     render() {
         return (
             <View style={styles.container}>
@@ -48,10 +41,6 @@ class KHomeDetail extends Component<{}> {
         );
     }
 
-    //点击事件
-    activeEvent(event) {
-        this.setState({title: event});
-    }
 }
 
 
