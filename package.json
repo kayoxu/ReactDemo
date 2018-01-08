@@ -10,7 +10,7 @@
     "react": "16.0.0",
     "react-native": "0.51.0",
     "react-native-tab-navigator": "^0.3.4",
-    "react-navigation": "^1.0.0-beta.22",
+    "react-navigation": "^1.0.0-beta.23",
     "react-timer-mixin": "^0.13.3"
   },
   "devDependencies": {
