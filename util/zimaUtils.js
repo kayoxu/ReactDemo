@@ -2,7 +2,8 @@ import {
     Alert,
     Linking,
     Image,
-    Dimensions
+    Dimensions,
+    Platform
 } from 'react-native';
 import React from 'react';
 
@@ -70,7 +71,7 @@ function NavOptions(navTitle, label, nIcon, sIcon,) {
     const headerTitle = navTitle;
     const headerTitleStyle = {fontSize: 22, color: 'white', alignSelf: 'center'};
     // header的style
-    const headerStyle = {backgroundColor: mainColor,};
+    const headerStyle = {backgroundColor: mainColor, height: Platform.OS === "ios" ? 64 : 56};
     const tabBarVisible = label !== null;
 
     return {

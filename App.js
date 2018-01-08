@@ -12,12 +12,13 @@ import {
     Text,
     TextInput,
     View,
-    Button
+    Button,
 } from 'react-native';
 
 import * as zimaUtils from "./util/zimaUtils";
 
 import Main from './component/main/KMain';
+import Launcher from './component/main/Klauncher';
 
 const Dimensions = require('Dimensions');
 
@@ -42,14 +43,14 @@ function openBtn() {
 export default class App extends Component<{}> {
 
     render() {
+        if (Platform.OS === 'ios') {
+            return <Main/>
+        } else {
+            return <Launcher/>
+        }
 
-        return (
-
-            <Main/>
-        );
     }
 }
-
 
 
 const styles = StyleSheet.create({

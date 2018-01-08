@@ -37,8 +37,21 @@ class KMain extends Component<{}> {
         this.state = {title: '不透明触摸'};
     };
 
+    static navigationOptions = (navigation, screenProps) => {
+        let options = zimaUtils.NavOptions("");
+        options.header = () => {
+            return (
+                <View>
+                </View>
+            )
+        };
+        return options;
+    };
+
+
     render() {
         return (
+
             <KNav/>
         );
     }
@@ -52,7 +65,7 @@ const KTab = TabNavigator({
         navigationOptions: () => {
             let options = zimaUtils.NavOptions("首页", '首页', 'icon_tabbar_homepage', 'icon_tabbar_homepage_selected');
             // options.headerMode = 'none';
-         //   return options;
+            //   return options;
         }
     },
     Shop: {
