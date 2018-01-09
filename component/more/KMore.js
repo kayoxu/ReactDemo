@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import zimaUtils from '../../util/zimaUtils';
 
-var CommonCell = require('./KCommonCell');
+import CommonCell from './KCommonCell';
 
 class KMore extends Component<{}> {
 
@@ -44,8 +44,26 @@ class KMore extends Component<{}> {
         return (
             <View style={styles.container}>
                 <ScrollView>
-                    <View>
-                        <CommonCell title={'扫一扫'} />
+                    <View style={{marginTop: 20}}>
+                        <CommonCell title={'扫一扫'}/>
+                    </View>
+                    <View style={{marginTop: 20}}>
+                        <CommonCell title={'省流量模式'} isSwitch={true}/>
+                        <CommonCell title={'消息提醒'}/>
+                        <CommonCell title={'邀请朋友使用小码哥电商'}/>
+                        <CommonCell title={'清空缓存'} rightTitle={'11.5MB'}/>
+                    </View>
+                    <View style={{marginTop: 20}}>
+                        <CommonCell title={'意见反馈'}/>
+                        <CommonCell title={'问卷调查'}/>
+                        <CommonCell title={'支付帮助'}/>
+                        <CommonCell title={'网络诊断'}/>
+                        <CommonCell title={'关于码团'}/>
+                        <CommonCell title={'省流量模式'}/>
+                        <CommonCell title={'我要应聘'}/>
+                    </View>
+                    <View style={{marginTop: 20}}>
+                        <CommonCell title={'精品应用'}/>
                     </View>
                 </ScrollView>
 

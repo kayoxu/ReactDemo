@@ -10,6 +10,8 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+import zimaUtils from '../../util/zimaUtils';
+
 class KMine extends Component<{}> {
 
     static defaultProps = {
@@ -21,6 +23,19 @@ class KMine extends Component<{}> {
         this.state = {title: '不透明触摸'};
     };
 
+    static navigationOptions = (navigation, screenProps) => {
+        let options = zimaUtils.NavOptions("我的", '我的', 'icon_tabbar_mine', 'icon_tabbar_mine_selected');
+        options.header = () => {
+            return (
+                <View>
+
+                </View>
+            )
+        };
+        return options;
+    };
+
+
     render() {
         return (
             <View style={styles.container}>
@@ -30,10 +45,6 @@ class KMine extends Component<{}> {
         );
     }
 
-    //点击事件
-    activeEvent(event) {
-        this.setState({title: event});
-    }
 }
 
 

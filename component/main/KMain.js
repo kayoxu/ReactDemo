@@ -23,7 +23,7 @@ let HomeDetail = require('../home/KHomeDetail');
 let zimaUtils = require('../../util/zimaUtils');
 
 
-let mainPage = "More";
+let mainPage = "Mine";
 
 
 class KMain extends Component<{}> {
@@ -74,7 +74,7 @@ const KTab = TabNavigator({
     },
     Mine: {
         screen: Mine,
-        navigationOptions: () => zimaUtils.NavOptions("我的", '我的', 'icon_tabbar_mine', 'icon_tabbar_mine_selected'),
+        //navigationOptions: () => zimaUtils.NavOptions("我的", '我的', 'icon_tabbar_mine', 'icon_tabbar_mine_selected'),
     },
     More: {
         screen: More,
