@@ -13,6 +13,7 @@ import {
 
 import zimaUtils from '../../util/zimaUtils';
 import CommonMyCell from './KCommonMyCell';
+import MineMiddleView from './KMineMiddleView';
 
 class KMine extends Component<{}> {
 
@@ -29,7 +30,7 @@ class KMine extends Component<{}> {
         let options = zimaUtils.NavOptions("我的", '我的', 'icon_tabbar_mine', 'icon_tabbar_mine_selected');
         options.header = () => {
             return (
-                <View>
+                <View style={{height: 100, backgroundColor: zimaUtils.mainColor}}>
 
                 </View>
             )
@@ -42,6 +43,14 @@ class KMine extends Component<{}> {
         return (
             <ScrollView
                 style={styles.scrollViewStyle}>
+                <View style={{marginTop: 0}}>
+                    <CommonMyCell leftIconName='collect'
+                                  leftTitle='我的订单'
+                                  rightIconName=''
+                                  rightTitle='查看全部订单'/>
+                    <MineMiddleView/>
+                </View>
+
                 <View style={{marginTop: 20}}>
                     <CommonMyCell leftIconName='draft'
                                   leftTitle='小码哥钱包'
