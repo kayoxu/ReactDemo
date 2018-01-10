@@ -31,9 +31,7 @@ class KMine extends Component<{}> {
         let options = zimaUtils.NavOptions("我的", '我的', 'icon_tabbar_mine', 'icon_tabbar_mine_selected');
         options.header = () => {
             return (
-                <View style={{height: 100, backgroundColor: zimaUtils.mainColor}}>
-
-                </View>
+                <MineHeaderView/>
             )
         };
         return options;
