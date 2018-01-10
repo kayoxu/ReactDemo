@@ -97,18 +97,20 @@ const KTab = TabNavigator({
         style: {
             backgroundColor: '#0000',
             height: 52,
-            zIndex: 0,
-            position: 'relative'
+            // zIndex: 1,
+            // position: 'relative'
+        },
+        iconStyle: {
+            marginTop: Platform.OS === 'ios' ? 4 : -1,
+            height: 30,
+            width: 30,
         },
         labelStyle: {
             fontSize: 11,
-            marginTop: -1,
+            marginBottom: Platform.OS === 'ios' ? 4 : -1,
+            // bottom: 1,
         },
-        iconStyle: {
-            marginTop: -1,
-            height: 30,
-            width: 30
-        },
+
         tabStyle: {
             backgroundColor: zimaUtils.mainColor,
             // margin: 10

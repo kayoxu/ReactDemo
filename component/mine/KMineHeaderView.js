@@ -50,7 +50,7 @@ class KMineHeaderView extends Component<{}> {
                             <Image source={{uri: 'avatar_vip'}} style={{width: 17, height: 17}}/>
                         </View>
                     </View>
-                    <Image source={{uri: 'icon_cell_rightArrow'}} style={{width: 8, height: 13}}/>
+                    <Image source={{uri: 'icon_cell_rightarrow'}} style={{width: 8, height: 13}}/>
                 </View>
                 <View style={styles.topBottomView}>
                     {this.renderTopBottomView()}
@@ -99,7 +99,7 @@ class InnerView extends Component {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: zimaUtils.mainColor,
-        height: 150,
+        height: 160,
     },
     topViewStyle: {
         flex: 1,
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     },
 
     topTopViewStyle: {
-        marginTop: 10,
+        marginTop: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
