@@ -6,7 +6,9 @@ import {
     TextInput,
     TouchableOpacity,
     View,
-    Platform
+    Platform,
+    ScrollView,
+    ListView
 } from 'react-native';
 
 let detail = require('../home/KHomeDetail');
@@ -36,15 +38,18 @@ class KHome extends Component<{}> {
         return options;
     };
 
-
+// <TouchableOpacity activeOpacity={0.5} onPress={() => {
+//     zimaUtils.startActivity(this, 'HomeDetail')
+// }}>
+// <Text>Home</Text>
+// </TouchableOpacity>
     render() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity activeOpacity={0.5} onPress={() => {
-                    zimaUtils.startActivity(this, 'HomeDetail')
-                }}>
-                    <Text>Home</Text>
-                </TouchableOpacity>
+                <ScrollView>
+                    {/*头部View*/}
+                    
+                </ScrollView>
 
 
             </View>

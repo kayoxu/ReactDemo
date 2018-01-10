@@ -23,7 +23,7 @@ let HomeDetail = require('../home/KHomeDetail');
 let zimaUtils = require('../../util/zimaUtils');
 
 
-let mainPage = "Mine";
+let mainPage = "Home";
 
 
 class KMain extends Component<{}> {
