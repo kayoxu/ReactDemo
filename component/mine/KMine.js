@@ -14,6 +14,7 @@ import {
 import zimaUtils from '../../util/zimaUtils';
 import CommonMyCell from './KCommonMyCell';
 import MineMiddleView from './KMineMiddleView';
+import MineHeaderView from './KMineHeaderView';
 
 class KMine extends Component<{}> {
 
