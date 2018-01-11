@@ -132,13 +132,14 @@ const styles = StyleSheet.create({
         borderBottomWidth: .2
     },
     topBottomViewStyle: {
-        marginTop: Platform.OS === 'ios' ? 0 :3,
+        marginTop: zimaUtils.ScreenAdaptation(0, 0, 3),//Platform.OS === 'ios' ? 0 :3,
         flexDirection: 'row',
-        height: Platform.OS === 'ios' ? 20 : 14,
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: -1
-    }
-});
+        height:zimaUtils.ScreenAdaptation(20, 20, 14),//Platform.OS === 'ios' ? 20 : 14,
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: -1
+}
+})
+;
 
 module.exports = KHomeTopView;

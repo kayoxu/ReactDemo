@@ -86,6 +86,17 @@ function NavOptions(navTitle, label, nIcon, sIcon,) {
 }
 
 
+/**
+ *
+ * @param iphonex
+ * @param iphone
+ * @param android
+ * @constructor
+ */
+function ScreenAdaptation(iphonex, iphone, android) {
+    return Platform.OS === 'ios' ? (height > 800 ? iphonex : iphone) : android;
+}
+
 module.exports = {
     openLock: openLock,
     TimerGo: TimerGo,
@@ -94,6 +105,7 @@ module.exports = {
     NavOptions: NavOptions,
     mainColor: mainColor,
     height: height,
-    width: width
+    width: width,
+    ScreenAdaptation: ScreenAdaptation
 };
 
