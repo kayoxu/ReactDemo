@@ -96,19 +96,19 @@ const KTab = TabNavigator({
 
         style: {
             backgroundColor: '#0000',
-            height: 52,
+            height: Platform.OS === 'ios' ? 50 :52,
             // zIndex: 1,
             // position: 'relative'
         },
         iconStyle: {
-            marginTop: Platform.OS === 'ios' ? 4 : -3,
+            marginTop: Platform.OS === 'ios' ? 0 : -3,
             height: 30,
             width: 30,
         },
         labelStyle: {
             fontSize: 11,
-            marginBottom: Platform.OS === 'ios' ? 4 : 0,
-            marginTop: Platform.OS === 'ios' ? 0 : -1,
+            // marginBottom: Platform.OS === 'ios' ? 4 : 0,
+            marginTop: Platform.OS === 'ios' ? 20 : -1,
             // bottom: 1,
         },
 

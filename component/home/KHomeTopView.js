@@ -132,11 +132,12 @@ const styles = StyleSheet.create({
         borderBottomWidth: .2
     },
     topBottomViewStyle: {
-        marginTop: 3,
+        marginTop: Platform.OS === 'ios' ? 0 :3,
         flexDirection: 'row',
-        height: 14,
+        height: Platform.OS === 'ios' ? 20 : 14,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        zIndex: -1
     }
 });
 

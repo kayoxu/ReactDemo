@@ -66,7 +66,7 @@ function renderNavBar() {
     return (
         <View style={styles.navBarStyle}>
             <TouchableOpacity activeOpacity={0.5} onPress={() => alert("eee")}>
-                <Text style={{color: 'white'}}>广州</Text>
+                <Text style={styles.navBarLeftBtnStyle}>广州</Text>
             </TouchableOpacity>
 
             <TextInput placeholder='输入商家,品类,商圈'
@@ -94,12 +94,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#FAFAFA'
     },
+    navBarLeftBtnStyle: {
+        color: 'white',
+        alignSelf: 'center',
+        // marginTop: Platform.OS === 'ios' ? 16 : 0
+    },
     topInputStyle: {
         width: zimaUtils.width * .6,
         height: 40,
         backgroundColor: 'white',
         borderRadius: 10,
-        marginTop: Platform.OS !== 'ios' ? 0 : 16
+        // marginTop: Platform.OS === 'ios' ? 16 : 0
 
     },
     navRightImgStyle: {
@@ -107,15 +112,17 @@ const styles = StyleSheet.create({
         height: 28,
     },
     navBarStyle: {
-        height: Platform.OS !== 'ios' ? 56 : 64,
+        height: Platform.OS === 'ios' ? (zimaUtils.height > 800 ? 108 : 84) : 56,
         backgroundColor: zimaUtils.mainColor,
         flexDirection: 'row',
         justifyContent: 'space-around',//between
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingTop: Platform.OS === 'ios' ? (zimaUtils.height > 800 ? 30 : 20) : 0
     },
     navBarRightView: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        // marginTop: Platform.OS === 'ios' ? 16 : 0
     }
 });
 

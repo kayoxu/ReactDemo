@@ -99,7 +99,7 @@ class InnerView extends Component {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: zimaUtils.mainColor,
-        height: 160,
+        height: Platform.OS ==='ios'? (zimaUtils.height>800? 180: 160): 160,
     },
     topViewStyle: {
         flex: 1,
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     },
 
     topTopViewStyle: {
-        marginTop: 20,
+        marginTop: Platform.OS ==='ios'? (zimaUtils.height>800? 40: 20):20,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
