@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#E8E8E8'
+        backgroundColor: '#FAFAFA'
     },
     rightBtnStyle: {
         height: 40,

@@ -13,6 +13,8 @@ import {
 
 let detail = require('../home/KHomeDetail');
 let zimaUtils = require('../../util/zimaUtils');
+let HomeTopView = require('./KHomeTopView');
+let HomeMiddleView = require('./KHomeMiddleView');
 
 class KHome extends Component<{}> {
 
@@ -48,7 +50,10 @@ class KHome extends Component<{}> {
             <View style={styles.container}>
                 <ScrollView>
                     {/*头部View*/}
-                    
+                    <HomeTopView/>
+                    {/*中间的内容*/}
+                    <HomeMiddleView/>
+
                 </ScrollView>
 
 
@@ -87,7 +92,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FEFEFE'
+        backgroundColor: '#FAFAFA'
     },
     topInputStyle: {
         width: zimaUtils.width * .6,

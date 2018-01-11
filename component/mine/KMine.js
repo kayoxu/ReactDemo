@@ -92,7 +92,7 @@ class KMine extends Component<{}> {
 const styles = StyleSheet.create({
 
     scrollViewStyle: {
-        backgroundColor: '#e8e8e8'
+        backgroundColor: '#FAFAFA'
     }
 
 

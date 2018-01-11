@@ -10,7 +10,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-class KShop extends Component<{}> {
+class KHomeMiddleView extends Component<{}> {
 
     static defaultProps = {
         age: 21,
@@ -31,20 +31,16 @@ class KShop extends Component<{}> {
         );
     }
 
-    //点击事件
-    activeEvent(event) {
-        this.setState({title: event});
-    }
 }
 
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        marginTop: 14,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FAFAFA'
-    }, innerViewStyle: {}
+        backgroundColor: '#FEFEFE'
+    }
 });
 
-module.exports = KShop;
+module.exports = KHomeMiddleView;

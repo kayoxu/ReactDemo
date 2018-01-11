@@ -82,7 +82,7 @@ const KTab = TabNavigator({
     }
 }, {
     tabBarPosition: 'bottom',
-    swipeEnabled: true,
+    swipeEnabled: false,
     animationEnabled: true,
     lazy: true,
     initialRouteName: mainPage,
@@ -101,13 +101,14 @@ const KTab = TabNavigator({
             // position: 'relative'
         },
         iconStyle: {
-            marginTop: Platform.OS === 'ios' ? 4 : -1,
+            marginTop: Platform.OS === 'ios' ? 4 : -3,
             height: 30,
             width: 30,
         },
         labelStyle: {
             fontSize: 11,
-            marginBottom: Platform.OS === 'ios' ? 4 : -1,
+            marginBottom: Platform.OS === 'ios' ? 4 : 0,
+            marginTop: Platform.OS === 'ios' ? 0 : -1,
             // bottom: 1,
         },
 
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FEFEFE'
+        backgroundColor: '#FAFAFA'
     }, innerViewStyle: {}
 });
 
