@@ -17,7 +17,7 @@ class KMiddleCommonView extends Component<{}> {
         title: '',
         subTitle: '',
         rightIcon: '',
-        titleColor: 'red'
+        titleColor: ''
     };
 
     constructor(props) {
