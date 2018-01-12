@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         borderColor: '#9999',
         borderRightWidth: .2,
         borderBottomWidth: .2,
-        height: 60
+       flex:1
     },
     titleStyle: {
         fontSize: 20,

@@ -82,7 +82,7 @@ const KTab = TabNavigator({
     }
 }, {
     tabBarPosition: 'bottom',
-    swipeEnabled: false,
+    swipeEnabled: true,
     animationEnabled: true,
     lazy: true,
     initialRouteName: mainPage,
