@@ -10,6 +10,9 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+let MiddleCommonView = require('./KMiddleCommonView');
+let TopMiddleData = require('../../LocalData/HomeTopMiddleLeft');
+
 class KHomeMiddleView extends Component<{}> {
 
     static defaultProps = {
@@ -24,19 +27,42 @@ class KHomeMiddleView extends Component<{}> {
     render() {
         return (
             <View style={styles.container}>
+                {this.renderLeftView()}
+                <View >
+                    {this.renderRightView()}
+                </View>
 
-                <Text>Shop</Text>
 
             </View>
         );
     }
 
+    renderLeftView() {
+
+    }
+
+    renderRightView() {
+        let itemArr = [];
+        let rightDatas = TopMiddleData.dataRight;
+        for (let i = 0; i < rightDatas.length; i++) {
+            let data = rightDatas[i];
+            itemArr.push(
+                <MiddleCommonView key={i}
+                                  title={data.title}
+                                  subTitle={data.subTitle}
+                                  rightIcon={data.rightImage}
+                                  titleColor={data.titleColor}/>
+            );
+        }
+        return itemArr;
+    }
 }
 
 
 const styles = StyleSheet.create({
     container: {
         marginTop: 14,
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FEFEFE'
