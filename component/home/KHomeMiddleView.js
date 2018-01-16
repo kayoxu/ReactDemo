@@ -49,7 +49,7 @@ class KHomeMiddleView extends Component<{}> {
         itemArr.push(<Image key={0} source={{uri: data.img1}}
                             style={{width: 120, height: 30, resizeMode: 'contain'}}/>);
         itemArr.push(<Image key={1} source={{uri: data.img2}}
-                            style={{width: 80, height: 30 }}/>);
+                            style={{width: 80, height: 30}}/>);
         itemArr.push(<Text key={2} style={{color: 'gray', fontSize: 20}}>{data.title}</Text>);
         itemArr.push(<View key={3}
                            style={{flexDirection: 'row', width: 100, alignItems: 'center'}}>
