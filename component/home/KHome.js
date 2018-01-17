@@ -41,11 +41,6 @@ class KHome extends Component<{}> {
         return options;
     };
 
-// <TouchableOpacity activeOpacity={0.5} onPress={() => {
-//     zimaUtils.startActivity(this, 'HomeDetail')
-// }}>
-// <Text>Home</Text>
-// </TouchableOpacity>
     render() {
         return (
             <View style={styles.container}>

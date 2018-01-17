@@ -7,7 +7,8 @@ import {
     TextInput,
     View,
     Button,
-    TouchableOpacity
+    TouchableOpacity,
+    TabBarIOS
 } from 'react-native';
 
 let zimaUtils = require('../../util/zimaUtils');
