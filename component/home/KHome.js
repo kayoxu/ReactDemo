@@ -15,6 +15,7 @@ let detail = require('../home/KHomeDetail');
 let zimaUtils = require('../../util/zimaUtils');
 let HomeTopView = require('./KHomeTopView');
 let HomeMiddleView = require('./KHomeMiddleView');
+let MiddleBottomView = require('./KMiddleBottomView');
 
 class KHome extends Component<{}> {
 
@@ -53,12 +54,21 @@ class KHome extends Component<{}> {
                     <HomeTopView/>
                     {/*中间的内容*/}
                     <HomeMiddleView/>
+                    {/*中间下半部分*/}
+                    <MiddleBottomView
+                        popTopHome={(data) => this.pushToDetail(data)}
+                    />
 
                 </ScrollView>
 
 
             </View>
         );
+    }
+
+
+    pushToDetail(data) {
+        zimaUtils.startActivity(this, 'HomeDetail',data)
     }
 }
 
@@ -82,9 +92,8 @@ function renderNavBar() {
             </View>
 
         </View>
-
-
     );
+
 }
 
 const styles = StyleSheet.create({

@@ -11,7 +11,8 @@ import {
 } from 'react-native';
 import {
     TabNavigator,
-    StackNavigator
+    StackNavigator,
+    NavigationActions
 } from 'react-navigation';
 
 let Home = require('../home/KHome');
@@ -96,7 +97,7 @@ const KTab = TabNavigator({
 
         style: {
             backgroundColor: '#0000',
-            height: Platform.OS === 'ios' ? 50 :52,
+            height: Platform.OS === 'ios' ? 50 : 52,
             // zIndex: 1,
             // position: 'relative'
         },

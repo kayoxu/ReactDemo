@@ -7,6 +7,12 @@ import {
 } from 'react-native';
 import React from 'react';
 
+import {
+    TabNavigator,
+    StackNavigator,
+    NavigationActions
+} from 'react-navigation';
+
 let {width, height} = Dimensions.get('window');
 
 let mainColor = 'orange';
@@ -43,10 +49,37 @@ function doLater(timer, func, time) {
  *
  * @param that this
  * @param  activity
+ * @param data
  */
-function startActivity(that, activity) {
+
+function startActivity(that, activity, data) {
     let {navigate} = that.props.navigation;
-    navigate(activity);
+    navigate(activity, {data: data});
+}
+
+/**
+ *
+ * @param that this
+ */
+function goBack(that) {
+    that.props.navigation.goBack();
+}
+
+/**
+ *
+ * @param that this
+ * @param  activity
+ */
+function startActivityNoBack(that, activity) {
+
+    const {dispatch} = that.props.navigation;
+    const resetAction = NavigationActions.reset({ //reset
+        index: 0,//指定显示数组内的路由
+        actions: [
+            NavigationActions.navigate({routeName: activity, params: {data: ""}}),
+        ]
+    });
+    dispatch(resetAction);
 }
 
 /**
@@ -101,7 +134,9 @@ module.exports = {
     openLock: openLock,
     TimerGo: TimerGo,
     doLater: doLater,
+    goBack: goBack,
     startActivity: startActivity,
+    startActivityNoBack: startActivityNoBack,
     NavOptions: NavOptions,
     mainColor: mainColor,
     height: height,

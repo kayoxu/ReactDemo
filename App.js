@@ -43,12 +43,12 @@ function openBtn() {
 export default class App extends Component<{}> {
 
     render() {
-        // if (Platform.OS === 'ios' || true) {
-        //     return <Main/>
-        // } else {
-        //     return <Launcher/>
-        // }
-        return <Main/>
+        if (Platform.OS === 'ios') {
+            return <Main/>
+        } else {
+            return <Launcher/>
+        }
+        // return <Main/>
     }
 }
 

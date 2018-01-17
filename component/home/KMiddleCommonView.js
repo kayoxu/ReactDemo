@@ -17,7 +17,9 @@ class KMiddleCommonView extends Component<{}> {
         title: '',
         subTitle: '',
         rightIcon: '',
-        titleColor: ''
+        titleColor: '',
+        tplurl: '',
+        callBackClickCell: null
     };
 
     constructor(props) {
@@ -27,18 +29,23 @@ class KMiddleCommonView extends Component<{}> {
 
     render() {
         return (
-            <View style={styles.container}>
-                <View>
-                    <Text style={[styles.titleStyle, {color: this.props.titleColor}]}>{this.props.title}</Text>
-                    <Text style={styles.subTitleStyle}>{this.props.subTitle}</Text>
-                </View>
-                <Image source={{uri: this.props.rightIcon}} style={styles.imgStyle}/>
+            <TouchableOpacity onPress={() => this.clickCell(this.props.tplurl)}>
+                <View style={styles.container}>
+                    <View>
+                        <Text style={[styles.titleStyle, {color: this.props.titleColor}]}>{this.props.title}</Text>
+                        <Text style={styles.subTitleStyle}>{this.props.subTitle}</Text>
+                    </View>
+                    <Image source={{uri: this.props.rightIcon}} style={styles.imgStyle}/>
 
-            </View>
+                </View>
+            </TouchableOpacity>
         );
     }
 
-
+    clickCell(data) {
+        if (this.props.callBackClickCell == null) return;
+        this.props.callBackClickCell(data);
+    }
 }
 
 
@@ -52,7 +59,7 @@ const styles = StyleSheet.create({
         borderColor: '#9999',
         borderRightWidth: .2,
         borderBottomWidth: .2,
-       flex:1
+        height: 60
     },
     titleStyle: {
         fontSize: 20,
@@ -63,7 +70,8 @@ const styles = StyleSheet.create({
     },
     imgStyle: {
         width: 50,
-        height: 50
+        height: 50,
+        resizeMode: 'contain'
     }
 });
 

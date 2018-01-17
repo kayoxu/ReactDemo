@@ -20,7 +20,10 @@ class KHomeDetail extends Component<{}> {
 
     constructor(props) {
         super(props);
-        this.state = {title: '不透明触摸'};
+        this.state = {
+            title: '不透明触摸',
+            data: this.props.navigation.state.params.data
+        };
     };
 
 
@@ -30,24 +33,25 @@ class KHomeDetail extends Component<{}> {
         nav.headerRight = (
             <View style={{height: 44, width: 55, justifyContent: 'center', paddingRight: 15}}/>
         );
-        // nav.header = (
-        //     <View>
-        //
-        //     </View>
-        // );
+
         return nav;
     };
 
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text>KHomeDetail</Text>
 
+            <View style={styles.container}>
+                <TouchableOpacity onPress={() => this.popTopHome()}>
+                    <Text>{this.state.data}</Text>
+                </TouchableOpacity>
             </View>
         );
     }
 
+    popTopHome() {
+        zimaUtils.goBack(this);
+    }
 }
 
 

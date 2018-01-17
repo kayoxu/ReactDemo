@@ -18,12 +18,13 @@ let zimaUtils = require('../../util/zimaUtils');
 class LauncherImage extends Component<{}> {
     componentDidMount() {
         setTimeout(() => {
-            let {navigate} = this.props.navigation;
-            navigate("Main");
+            // let {navigate} = this.props.navigation;
+            // navigate("Main");
+            zimaUtils.startActivityNoBack(this, 'Main');
         }, 1000)
     }
 
-    render() {
+    render() {//launchimage
         return (
             <Image source={{uri: 'launchimage'}} style={styles.container}/>
         );
