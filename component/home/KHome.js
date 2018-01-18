@@ -11,11 +11,11 @@ import {
     ListView
 } from 'react-native';
 
-let detail = require('../home/KHomeDetail');
 let zimaUtils = require('../../util/zimaUtils');
 let HomeTopView = require('./KHomeTopView');
 let HomeMiddleView = require('./KHomeMiddleView');
 let MiddleBottomView = require('./KMiddleBottomView');
+let ShopCenter = require('./KShopCenter');
 
 class KHome extends Component<{}> {
 
@@ -53,6 +53,8 @@ class KHome extends Component<{}> {
                     <MiddleBottomView
                         popTopHome={(data) => this.pushToDetail(data)}
                     />
+                    {/*购物中心*/}
+                    <ShopCenter popToHomeView={(url) => this.pushToShopCenterDetail(url)}/>
 
                 </ScrollView>
 
@@ -62,8 +64,12 @@ class KHome extends Component<{}> {
     }
 
 
+    pushToShopCenterDetail(data) {
+        zimaUtils.startActivity(this, 'ShopCenterDetailView', data)
+    }
+
     pushToDetail(data) {
-        zimaUtils.startActivity(this, 'HomeDetail',data)
+        zimaUtils.startActivity(this, 'HomeDetail', data)
     }
 }
 

@@ -13,7 +13,7 @@ import {
 
 let zimaUtils = require('../../util/zimaUtils');
 
-class KHomeDetail extends Component<{}> {
+class KShopCenterDetailView extends Component<{}> {
 
     static defaultProps = {
         age: 21,
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
     }, innerViewStyle: {}
 });
 
-module.exports = KHomeDetail;
+module.exports = KShopCenterDetailView;

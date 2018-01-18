@@ -21,6 +21,7 @@ let Mine = require('../mine/KMine');
 let More = require('../more/KMore');
 
 let HomeDetail = require('../home/KHomeDetail');
+let ShopCenterDetailView = require('../home/KShopCenterDetailView');
 let zimaUtils = require('../../util/zimaUtils');
 
 
@@ -130,6 +131,10 @@ const KNav = StackNavigator({
     },
     HomeDetail: {
         screen: HomeDetail
+    },
+
+    ShopCenterDetailView: {
+        screen: ShopCenterDetailView
     }
 
 });
