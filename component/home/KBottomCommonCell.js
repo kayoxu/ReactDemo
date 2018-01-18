@@ -40,7 +40,7 @@ class KBottomCommonCell extends Component<{}> {
                 <View style={styles.rightViewStyle}>
                     <Text>{this.props.rightTitle}</Text>
                     <Image
-                        source={{uri: 'icon_cell_rightArrow'}}
+                        source={{uri: 'icon_cell_rightarrow'}}
                         style={styles.rightViewIconStyle}/>
 
                 </View>
