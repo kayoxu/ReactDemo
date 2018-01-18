@@ -73,7 +73,7 @@ function goBack(that) {
 function startActivityNoBack(that, activity) {
 
     const {dispatch} = that.props.navigation;
-    const resetAction = NavigationActions.reset({ //reset
+    const resetAction = NavigationActions.reset({
         index: 0,//指定显示数组内的路由
         actions: [
             NavigationActions.navigate({routeName: activity, params: {data: ""}}),
@@ -119,6 +119,12 @@ function NavOptions(navTitle, label, nIcon, sIcon,) {
 }
 
 
+function hideNavigator(nav) {
+    nav.header = () => {
+        return (null);
+    }; //隐藏ToolBar
+}
+
 /**
  *
  * @param iphonex
@@ -141,6 +147,7 @@ module.exports = {
     mainColor: mainColor,
     height: height,
     width: width,
-    ScreenAdaptation: ScreenAdaptation
+    ScreenAdaptation: ScreenAdaptation,
+    hideNavigator: hideNavigator
 };
 
